@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OneMinTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-Ky-XWJ">
+                                <rect key="frame" x="-1" y="300" width="376" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWt-b2-Fvh">
+                                <rect key="frame" x="131" y="375" width="113" height="30"/>
+                                <state key="normal" title="ストップ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStopClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C91-V9-pgB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXa-ls-W2T">
+                                <rect key="frame" x="246" y="375" width="113" height="30"/>
+                                <state key="normal" title="リセット">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onResetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vF8-ZK-TP1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-bW-s3Q">
+                                <rect key="frame" x="16" y="375" width="113" height="30"/>
+                                <state key="normal" title="スタート">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStartClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ey9-QC-WT9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oXa-ls-W2T" firstAttribute="top" secondItem="cU1-Ky-XWJ" secondAttribute="bottom" constant="8" id="ART-LA-Rda"/>
+                            <constraint firstItem="cU1-Ky-XWJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="DDW-36-j4W"/>
+                            <constraint firstItem="SWt-b2-Fvh" firstAttribute="top" secondItem="cU1-Ky-XWJ" secondAttribute="bottom" constant="8" id="KrX-8w-Zvb"/>
+                            <constraint firstItem="cU1-Ky-XWJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="MYs-5v-tXM"/>
+                            <constraint firstItem="oXa-ls-W2T" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ONx-wY-c4R"/>
+                            <constraint firstAttribute="centerX" secondItem="cU1-Ky-XWJ" secondAttribute="centerX" constant="0.5" id="Qck-bk-lMu"/>
+                            <constraint firstItem="xK0-bW-s3Q" firstAttribute="width" secondItem="SWt-b2-Fvh" secondAttribute="width" id="W5Z-Tx-Wwb"/>
+                            <constraint firstAttribute="centerX" secondItem="SWt-b2-Fvh" secondAttribute="centerX" constant="0.5" id="acW-Nh-8VZ"/>
+                            <constraint firstAttribute="centerY" secondItem="cU1-Ky-XWJ" secondAttribute="centerY" id="i2C-ct-faq"/>
+                            <constraint firstItem="xK0-bW-s3Q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="o8O-BV-GxV"/>
+                            <constraint firstItem="xK0-bW-s3Q" firstAttribute="width" secondItem="oXa-ls-W2T" secondAttribute="width" id="smA-nJ-f5a"/>
+                            <constraint firstItem="xK0-bW-s3Q" firstAttribute="top" secondItem="cU1-Ky-XWJ" secondAttribute="bottom" constant="8" id="sxd-mg-bpO"/>
+                            <constraint firstItem="xK0-bW-s3Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xQN-SA-PZt"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="cU1-Ky-XWJ" id="nnE-o0-WEL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
